@@ -1,0 +1,95 @@
+.footer {
+  box-sizing: border-box;
+  padding:0;
+  margin:0;
+  width: 100%;
+  position: absolute;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 0.2rem;
+  bottom: 0;
+  left: 0;
+  background-color: orange;
+  text-align: left;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+.footer div {
+  box-sizing: border-box;
+  padding-top: 0.2rem;
+}
+
+
+.footer .logo {
+  position: relative;
+  box-sizing: border-box;
+  flex-grow: 0;
+}
+
+.footer .logo img {
+  width: 4vw;
+  box-sizing: border-box;
+  display: block;
+}
+
+.footer .info {
+  box-sizing: border-box;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
+  overflow: hidden;
+}
+
+.footer .title-subtitle {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 0.2rem;
+  border-bottom: 3px solid rgba(0,0,0,0.2);
+}
+
+.footer .title {
+  box-sizing: border-box;
+  flex-grow: 1;
+  font-size: 150%;
+  font-weight: normal;
+}
+
+.footer .subtitle {
+  box-sizing: border-box;
+  flex-grow: 1;
+  font-size: 150%;
+  font-weight: lighter;
+}
+
+.footer .quick-news {
+  box-sizing: border-box;
+  flex-grow: 1;
+  font-size: 120%;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+
+.footer .quick-news {
+  animation: footerNewsFrame linear 1s;
+  animation-iteration-count: 1;
+  transform-origin: 50% 50%;
+  animation-fill-mode:forwards; /*when the spec is finished*/
+}
+
+@keyframes footerNewsFrame {
+  0% {
+    transform:  translate(0px,100px) ;
+  }
+  100% {
+    transform:  translate(0px,0px)  ;
+  }
+}
+
+
+
