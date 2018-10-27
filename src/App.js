@@ -10,24 +10,59 @@ import FooterContainer from './FooterContainer';
 
 const store = createStore(appReducers)
 
-const listOfAgenda = [
-  "Složení slibu členů zastupitelstva města",
-  "Schválení počtu místostarostů města",
-  "Určení funkcí, pro které budou členové zastupitelstva města uvolněni",
-  "Stanovení výše odměn neuvolněným členům zastupitelstva na následující volební období",
-  "Schválení způsobu volby starosty města, místostarosty města a členů rady města",
-  "Volba starosty města",
-  "Volba místostarosty města",
-  "Volba členů rady města",
-  "Zřízení výborů zastupitelstva města",
-  "Diskuze",
-]
+const agendaUrl = "https://pacov.city/zastupitelstvo/zasedani-2018-10/agenda.json"
+const newsUrl = "https://pacov.city/zastupitelstvo/zasedani-2018-10/news.json"
+
+
+// const fetchHeaders = new Headers()
+// fetchHeaders.append("Cache-control","no-cache")
+// fetchHeaders.append("pragma","no-cache")
+
+// const fetchInit = {
+//   method: "GET",
+//   headers: fetchHeaders
+// }
+
+
+setInterval(()=>{
+  fetch(newsUrl )
+    .then((resp) => resp.json())
+    .then((json)=>{
+      store.dispatch(setQuickNews(json))
+    })
+    .catch((reason)=>{
+      console.error(`fetch news ${newsUrl}`,reason)
+    })
+}, 7000)
+
+fetch(agendaUrl)
+  .then((resp) => resp.json())
+  .then((json)=>{
+    store.dispatch(setItems(json.agenda))
+    store.dispatch(setTitle(json.title))
+  })
+  .catch((reason)=>{
+    console.error(`fetch ${agendaUrl}`,reason)  
+  })
+
+
+
+
+const agendaDefaults = {
+  title: "Zasedání zastupitelstva města Pacov 31.10.2018",
+  agenda: [
+    "Set agendaUrl to get fresh agenda",
+    "Nastavte URL do agendaUrl"
+  ]
+}
+
+const defaultNews = ["set newsUrl to get news","no news1", "no news2", "no news3"]
 
 setInterval(()=>{store.dispatch(nextQuickNews());}, 7000)
 
-store.dispatch(setItems(listOfAgenda))
-store.dispatch(setTitle("Zasedání zastupitelstva města Pacov 31.10.2018"))
-store.dispatch(setQuickNews(["no news1", "no news2", "no news3"]))
+store.dispatch(setItems(agendaDefaults.agenda))
+store.dispatch(setTitle(agendaDefaults.title))
+store.dispatch(setQuickNews(defaultNews))
 
 class App extends Component {
   render() {
