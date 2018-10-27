@@ -1,3 +1,13 @@
+# Streaming info screen
+The application is intended as bluescreened overlay for event streaming.
+
+# Usage
+Customize the data in the app, load into the browser, set the browser full screen and add the browser window as a source to OBS using blue screen settings.
+
+
+
+# React App Generated
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
