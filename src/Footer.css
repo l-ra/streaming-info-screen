@@ -27,11 +27,11 @@
 .footer .logo {
   position: relative;
   box-sizing: border-box;
-  flex-grow: 0;
+  flex-grow: 0.2;
 }
 
 .footer .logo img {
-  width: 4vw;
+  width: 6vw;
   box-sizing: border-box;
   display: block;
 }
@@ -48,7 +48,9 @@
 .footer .title-subtitle {
   box-sizing: border-box;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  flex-wrap: wrap;
+  /*align-items: center;*/
   padding-bottom: 0.2rem;
   border-bottom: 3px solid rgba(0,0,0,0.2);
 }
@@ -56,21 +58,23 @@
 .footer .title {
   box-sizing: border-box;
   flex-grow: 1;
-  font-size: 180%;
+  font-size: 300%;
   font-weight: bold;
 }
 
 .footer .subtitle {
   box-sizing: border-box;
   flex-grow: 1;
-  font-size: 180%;
+  font-size: 250%;
   font-weight: normal;
 }
 
 .footer .quick-news {
   box-sizing: border-box;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
   flex-grow: 1;
-  font-size: 160%;
+  font-size: 250%;
   font-weight: normal;
   text-transform: uppercase;
 }
