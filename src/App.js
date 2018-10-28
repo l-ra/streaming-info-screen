@@ -10,8 +10,8 @@ import FooterContainer from './FooterContainer';
 
 const store = createStore(appReducers)
 
-const agendaUrl = "https://pacov.city/zastupitelstvo/zasedani-2018-10/agenda.json"
-const newsUrl = "https://pacov.city/zastupitelstvo/zasedani-2018-10/news.json"
+const agendaUrl = "https://pacov.city/zastupitelstvo/zasedani-2018-10/cors.php/agenda.json"
+const newsUrl = "https://pacov.city/zastupitelstvo/zasedani-2018-10/cors.php/news.json"
 
 
 // const fetchHeaders = new Headers()
@@ -52,11 +52,19 @@ const agendaDefaults = {
   title: "Zasedání zastupitelstva města Pacov 31.10.2018",
   agenda: [
     "Set agendaUrl to get fresh agenda",
+    "Nastavte URL do agendaUrl",
+    "Nastavte URL do agendaUrl",
+    "Nastavte URL do agendaUrl",
+    "Nastavte URL do agendaUrl",
+    "Nastavte URL do agendaUrl",
+    "Nastavte URL do agendaUrl",
+    "Nastavte URL do agendaUrl",
+    "Nastavte URL do agendaUrl",
     "Nastavte URL do agendaUrl"
   ]
 }
 
-const defaultNews = ["set newsUrl to get news","no news1", "no news2", "no news3"]
+const defaultNews = ["set newsUrl to get news","žádné zprávy, dobré zprávy", "když naprší, tak i uschne", "až opadá listí z dubu"]
 
 setInterval(()=>{store.dispatch(nextQuickNews());}, 7000)
 

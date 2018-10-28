@@ -6,6 +6,7 @@ import List from '@material-ui/core/List';
 import AgendaItem from './AgendaItem';
 import './StreamAgenda.css';
 
+
 const StreamAgenda = ({ onItemClick, items, currentIndex, showAgenda }) => {
   let elements = items.map((elm, idx, arr) => {
     //console.log(`${idx},${currentIndex},${elm}`)
