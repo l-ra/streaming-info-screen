@@ -3,7 +3,9 @@
   height: 100vh;
   display: flex;
   flex-direction: column;  /* make main axis vertical */
-  justify-content: center; /* center items vertically, in this case */
+  justify-content: top; /* center items vertically, in this case */
   align-items: center;     /* center items horizontally, in this case */
+  padding-top: 10px;
+  box-sizing: border-box;
 }
 

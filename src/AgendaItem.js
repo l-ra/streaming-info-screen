@@ -17,7 +17,7 @@ const AgendaItem = ({ onClick, index, text , selected}) => {
             </ListItemIcon>
             <ListItemText 
                 disableTypography 
-                primary={<Typography type="h1" style={{ fontSize: "200%" }}>{itemText}</Typography>} />
+                primary={<Typography type="h1" style={{ fontSize: "120%" }}>{itemText}</Typography>} />
         </ListItem>
     )
 }
