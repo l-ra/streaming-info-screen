@@ -10,8 +10,8 @@ import FooterContainer from './FooterContainer';
 
 const store = createStore(appReducers)
 
-const agendaUrl = "https://pacov.city/zastupitelstvo/zasedani-2018-10/cors.php/agenda.json"
-const newsUrl = "https://pacov.city/zastupitelstvo/zasedani-2018-10/cors.php/news.json"
+const agendaUrl = "https://pacov.city/zastupitelstvo/cors.php/agenda.json"
+const newsUrl = "https://pacov.city/zastupitelstvo/cors.php/news.json"
 
 
 // const fetchHeaders = new Headers()
